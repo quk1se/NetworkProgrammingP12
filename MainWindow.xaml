@@ -24,5 +24,10 @@
                         Padding="0 4 0 7"/>
             </UniformGrid>        
         </GroupBox>
+        <Button x:Name="EmailButton"
+        Click="EmailButton_Click"
+        Content="Email"
+        Margin="10 5"
+        Padding="0 4 0 7"/>
     </StackPanel>
 </Window>
