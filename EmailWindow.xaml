@@ -17,5 +17,10 @@
         </StackPanel>
         <TextBox x:Name="textBoxMessage" Text="I am a surgeon" TextWrapping="Wrap"/>
         <Button x:Name="SendButton1" Content="Send" Click="SendButton1_Click"/>
+
+        <TextBox x:Name="textBoxHtml" Text="&lt;h2>Добрий день!&lt;/h2> Вас вітає програма &lt;b style='color:tomato'>автоматичного&lt;/b> надсилання листів"
+                 TextWrapping="Wrap"/>
+        <Button x:Name="SendButton2" Content="Send" Click="SendButton2_Click"/>
+        <Button x:Name="SendButton3" Content="Send Code" Click="SendButton3_Click"/>
     </StackPanel>
 </Window>
