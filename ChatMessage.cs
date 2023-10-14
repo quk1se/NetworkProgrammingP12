@@ -14,7 +14,7 @@ namespace NetworkProgrammingP12
 
         public override string ToString()
         {
-            return $"{Login}: {Text}";
+            return $"{Moment} | {Login}: {Text}";
         }
     }
 }

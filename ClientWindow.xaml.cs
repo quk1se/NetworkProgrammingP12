@@ -58,6 +58,7 @@ namespace NetworkProgrammingP12
                         Command = "Message",
                         Message = new()
                         {
+
                             Login = LoginTextBox.Text,
                             Text = MessageTextBox.Text
                         }

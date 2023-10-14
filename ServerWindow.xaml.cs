@@ -152,7 +152,7 @@ namespace NetworkProgrammingP12
                     }
                     if (needLog)
                     {
-                        Dispatcher.Invoke(() => ServerLog.Text += $"{DateTime.Now} {str}\n");
+                        Dispatcher.Invoke(() => ServerLog.Text += $"{str}\n");
                     }
                     // Сервер готує відповідь і надсилає клієнту
                     socket.Send(Encoding.UTF8.GetBytes(
