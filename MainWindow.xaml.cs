@@ -43,5 +43,10 @@ namespace NetworkProgrammingP12
             new EmailWindow().ShowDialog();
             this.Show();
         }
+
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
+        {
+            new AuthWindow().ShowDialog();
+        }
     }
 }

@@ -29,5 +29,10 @@
         Content="Email"
         Margin="10 5"
         Padding="0 4 0 7"/>
+        <Button x:Name="AuthButton"
+        Click="AuthButton_Click"
+        Content="Auth"
+        Margin="10 5"
+        Padding="0 4 0 7"/>
     </StackPanel>
 </Window>
