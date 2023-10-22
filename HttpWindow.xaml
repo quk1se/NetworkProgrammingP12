@@ -1,0 +1,17 @@
+﻿<Window x:Class="NetworkProgrammingP12.HttpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetworkProgrammingP12"
+        mc:Ignorable="d"
+        Title="HttpWindow" Height="450" Width="300">
+    <StackPanel Orientation="Vertical">
+        <Button x:Name="get1Button" Content="Get" Click="get1Button_Click"/>
+        <Button x:Name="ratesButton" Content="Rate" Click="ratesButton_Click"/>
+        <Button x:Name="sortRatesButton" Content="Sort Rate" Click="sortRatesButton_Click"/>
+        <Button x:Name="RatexmlBtn" Content="RateXML" Click="RatexmlBtn_Click"/>
+        <TextBlock x:Name="textBlock1" FontFamily="Courier New"/>
+        
+    </StackPanel>
+</Window>

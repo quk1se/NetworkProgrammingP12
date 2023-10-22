@@ -34,5 +34,15 @@
         Content="Auth"
         Margin="10 5"
         Padding="0 4 0 7"/>
+        <Button x:Name="HttpButton"
+        Click="HttpButton_Click"
+        Content="HTTP"
+        Margin="10 5"
+        Padding="0 4 0 7"/>
+        <Button x:Name="CryptoButton"
+        Click="CryptoButton_Click"
+        Content="Crypto"
+        Margin="10 5"
+        Padding="0 4 0 7"/>
     </StackPanel>
 </Window>

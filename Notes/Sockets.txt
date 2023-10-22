@@ -80,3 +80,21 @@ sever (listen port 3)
   |                           connect(IP1:port5) 
   |
 sever (listen port 3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)
+    array[61]
