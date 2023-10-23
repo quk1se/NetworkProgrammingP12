@@ -27,6 +27,14 @@
                     <Label Content="{Binding Path=name}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Resources>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="GotFocus"
+                                 Handler="ListViewItem_GotFocus"/>
+                    <EventSetter Event="LostFocus"
+                                 Handler="ListViewItem_LostFocus"/>
+                </Style>
+            </ListView.Resources>
         </ListView>
 
         <Canvas Grid.Row="1" Grid.Column="1"/>

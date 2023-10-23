@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Azure;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,9 +30,10 @@ namespace NetworkProgrammingP12
         {
             InitializeComponent();
             CoinsData = new();
+            this.DataContext = this;
             _httpClient = new()
             {
-                BaseAddress = new Uri("https://api.coincap.io")
+                BaseAddress = new Uri("https://api.coincap.io/")
             };
         }
 
@@ -38,22 +41,51 @@ namespace NetworkProgrammingP12
         {
             LoadAssetsAsync();
         }
+
         private async Task LoadAssetsAsync()
         {
             var response = JsonSerializer.Deserialize<CoincapResponse>(
-                await _httpClient.GetStringAsync("/v2/assets?limit=10"));
+                await _httpClient.GetStringAsync("/v2/assets?limit=10")
+            );
             if (response == null)
             {
                 MessageBox.Show("Deserialization error");
+                return;
             }
             CoinsData.Clear();
-            foreach (var coinData in response!.data)
+            foreach (var coinData in response.data)
             {
                 CoinsData.Add(coinData);
-                
+            }
+
+        }
+
+        private void ListViewItem_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender is ListViewItem item)
+            {
+                item.Background = Brushes.Red;
+
+                //foreach (var coin in CoinsData)
+                //{
+                //    if (item.Content.ToString() == coin.name)
+                //    {
+                //        MessageBox.Show(coin.id);
+                //    }
+                //}
+            }
+        }
+
+        private void ListViewItem_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender is ListViewItem item)
+            {
+                item.Background = Brushes.White;
             }
         }
     }
+
+    ///////////////// ORM ////////////////////////
     public class CoincapResponse
     {
         public List<CoinData> data { get; set; }
